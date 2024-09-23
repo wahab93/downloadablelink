@@ -14,7 +14,7 @@ app.get('/download/:filename', (req, res) => {
     console.log('filename', filename)
     
     // Set the file path to the 'files' directory
-    const filePath = path.join(__dirname, 'files', filename);
+    const filePath = path.join(__dirname, 'public', filename);
     console.log('filePath' , filePath)
     
     // Use res.download() to send the zip file
