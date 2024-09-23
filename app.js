@@ -3,6 +3,11 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+app.get('/', (req,res)=>{
+    res.send('Home')
+})
+
 // Route to download a zip file
 app.get('/download/:filename', (req, res) => {
     const filename = req.params.filename;
