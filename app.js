@@ -11,9 +11,11 @@ app.get('/', (req,res)=>{
 // Route to download a zip file
 app.get('/download/:filename', (req, res) => {
     const filename = req.params.filename;
+    console.log('filename', filename)
     
     // Set the file path to the 'files' directory
     const filePath = path.join(__dirname, 'files', filename);
+    console.log('filePath' , filePath)
     
     // Use res.download() to send the zip file
     res.download(filePath, filename, (err) => {
